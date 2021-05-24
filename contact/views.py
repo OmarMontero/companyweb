@@ -17,7 +17,7 @@ def contact(request):
             email = EmailMessage(
                 "La Caffettiera: Nuevo mensaje de contacto",
                 "De {} <{}>\n\nEscribió:\n\n{}".format(name, email, content),
-                "no-contestar@inbox.mailtrap.io",
+                "noreply@inbox.mailtrap.io",
                 ["omamonalv@gmail.com"],
                 reply_to=[email]
             )

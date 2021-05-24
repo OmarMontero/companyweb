@@ -1,10 +1,10 @@
 from django.db import models
-# from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Page(models.Model):
     title = models.CharField( max_length=200)
-    content = models.TextField()  # RichTextField --> en lugar de TextField
+    content = RichTextField()  # RichTextField --> en lugar de TextField
     slug = models.SlugField(max_length=20, default="None")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
